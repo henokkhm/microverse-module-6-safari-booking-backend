@@ -13,7 +13,8 @@ class SafarisControllerTest < ActionDispatch::IntegrationTest
   test 'should create safari' do
     assert_difference('Safari.count') do
       post safaris_url,
-           params: { safari: { description: @safari.description, location: @safari.location, name: @safari.name, price: @safari.price } }, as: :json
+           params: { safari: { description: @safari.description, location: @safari.location,
+                               name: @safari.name, price: @safari.price, img: @safari.img } }, as: :json
     end
 
     assert_response :created
@@ -26,7 +27,8 @@ class SafarisControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update safari' do
     patch safari_url(@safari),
-          params: { safari: { description: @safari.description, location: @safari.location, name: @safari.name, price: @safari.price } }, as: :json
+          params: { safari: { description: @safari.description, location: @safari.location,
+                              name: @safari.name, price: @safari.price, img: @safari.img } }, as: :json
     assert_response :success
   end
 
