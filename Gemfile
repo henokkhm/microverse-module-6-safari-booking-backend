@@ -46,8 +46,8 @@ group :development do
 
   gem 'error_highlight', '>= 0.4.0', platforms: [:ruby]
 end
+gem 'cancancan'
 gem 'devise'
 gem 'devise-jwt'
 gem 'jsonapi-serializer'
 gem 'rubocop', '>= 1.0', '< 2.0'
-gem 'cancancan'

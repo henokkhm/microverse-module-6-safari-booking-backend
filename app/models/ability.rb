@@ -4,7 +4,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-   user ||= User.new
+    user ||= User.new
     # can :read, Product, public: true
     # can :read, Company, public: true
     can :read, Safari, public: true
@@ -12,7 +12,7 @@ class Ability
       can :create, Reservation
       can :read, Reservation, user_id: user.id
     end
-    
-     can :manage, :all if user.role=="admin"
+
+    can :manage, :all if user.role == 'admin'
   end
 end
