@@ -1,5 +1,5 @@
 # spec/models/user_spec.rb
-require 'rails_helper'
+require './spec/rails_helper.rb'
 
 RSpec.describe User, type: :model do
   describe 'validations' do

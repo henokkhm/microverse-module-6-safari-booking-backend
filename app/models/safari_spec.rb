@@ -1,5 +1,5 @@
 # spec/models/safari_spec.rb
-require 'rails_helper'
+require './spec/rails_helper.rb'
 
 RSpec.describe Safari, type: :model do
   describe 'validations' do
