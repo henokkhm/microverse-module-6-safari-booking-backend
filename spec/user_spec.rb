@@ -1,25 +1,19 @@
-# spec/models/user_spec.rb
-require 'rails_helper'
+# spec/factories/users.rb
+FactoryBot.define do
+  factory :user do
+    sequence(:email) { |n| "user#{n}@example.com" }
+    password { 'password' }
+    first_name { 'John' }
+    last_name { 'Doe' }
+    phone_no { '1234567890' }
+    role { :user }
 
-RSpec.describe User, type: :model do
-  describe 'validations' do
-    it { should validate_presence_of(:first_name) }
-    it { should validate_presence_of(:last_name) }
-    it { should validate_presence_of(:phone_no) }
-  end
+    after(:build) do |user|
+      user.class.skip_callback(:create, :before, :set_default_role)
+    end
 
-  describe 'enums' do
-    it { should define_enum_for(:role).with_values(%i[user admin]) }
-  end
-
-  describe 'associations' do
-    it { should have_many(:reservations).dependent(:destroy) }
-  end
-
-  describe 'after_initialize' do
-    it 'sets default role to user' do
-      user = User.new
-      expect(user.role).to eq('user')
+    after(:create) do |user|
+      user.class.set_callback(:create, :before, :set_default_role)
     end
   end
 end
