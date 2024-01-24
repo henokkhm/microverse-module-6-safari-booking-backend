@@ -49,3 +49,9 @@ RSpec.describe User, type: :model do
     it { should respond_to(:jwt_subject) }
   end
 end
+
+
+it { should have_secure_password }
+
+    it { should respond_to(:jwt_payload) }
+    it { should respond_to(:jwt_subject) }
