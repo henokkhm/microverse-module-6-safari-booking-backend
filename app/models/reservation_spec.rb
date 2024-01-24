@@ -1,5 +1,5 @@
 # spec/models/reservation_spec.rb
-require './spec/rails_helper'
+require 'spec/rails_helper'
 
 RSpec.describe Reservation, type: :model do
   describe 'associations' do

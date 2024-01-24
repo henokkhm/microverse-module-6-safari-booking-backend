@@ -1,5 +1,5 @@
 # spec/models/user_spec.rb
-require './spec/rails_helper'
+require 'spec/rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'validations' do
@@ -49,9 +49,3 @@ RSpec.describe User, type: :model do
     it { should respond_to(:jwt_subject) }
   end
 end
-
-
-it { should have_secure_password }
-
-    it { should respond_to(:jwt_payload) }
-    it { should respond_to(:jwt_subject) }
