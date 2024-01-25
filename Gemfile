@@ -11,7 +11,11 @@ gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
 
+<<<<<<< HEAD
 gem 'rspec', '~> 3.4'
+=======
+gem 'rswag'
+>>>>>>> development
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -41,9 +45,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri windows]
-  gem 'factory_bot_rails'
-  gem 'rspec-rails'
-  gem 'shoulda-matchers', require: false
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
