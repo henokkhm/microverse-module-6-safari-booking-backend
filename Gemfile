@@ -13,10 +13,6 @@ gem 'puma', '>= 5.0'
 
 gem 'rspec', '~> 3.4'
 
-
-
-
-
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -43,10 +39,10 @@ gem 'rack-cors'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', platforms: %i[mri windows]
-  gem 'rspec-rails'
   gem 'database_cleaner'
+  gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails'
+  gem 'rspec-rails'
   gem 'shoulda-matchers', require: false
 end
 

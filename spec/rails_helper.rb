@@ -1,12 +1,11 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'devise'
-require 'factory_bot' 
+require 'factory_bot'
 require 'factory_bot_rails'
 require 'shoulda/matchers'
 
 require 'support/factory_bot'
-
 
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
