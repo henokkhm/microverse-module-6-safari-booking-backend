@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :phone_no, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: true
   devise :database_authenticatable, :registerable, :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: self
   def set_default_role
