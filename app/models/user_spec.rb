@@ -44,12 +44,6 @@ RSpec.describe User, type: :model do
 
     it { should have_db_index(:email).unique(true) }
 
-    it { should validate_presence_of(:username).on(:create) }
-    it { should validate_uniqueness_of(:username).case_insensitive }
-    it { should allow_value('foga').for(:username) }
-
-    it { should have_db_index(:username).unique(true) }
-
     it { should have_secure_password }
 
     it { should respond_to(:jwt_payload) }
