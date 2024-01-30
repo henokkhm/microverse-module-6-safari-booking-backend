@@ -12,4 +12,5 @@ class User < ApplicationRecord
     self.role ||= :user
   end
   has_many :reservations, dependent: :destroy
+  has_many :safaris, through: :reservations
 end
