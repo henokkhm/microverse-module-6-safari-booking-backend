@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: %i[show update destroy]
-  before_action :set_user, only: [index]
+  before_action :set_user, only: [:index]
   before_action :authenticate_user!
 
   # GET /reservations
@@ -45,6 +45,10 @@ class ReservationsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_reservation
     @reservation = Reservation.find(params[:id])
+  end
+
+  def set_user
+    current_user
   end
 
   # Only allow a list of trusted parameters through.
