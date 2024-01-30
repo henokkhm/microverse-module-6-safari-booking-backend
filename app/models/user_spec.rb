@@ -7,6 +7,7 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:last_name) }
     it { should validate_presence_of(:phone_no) }
     it { should validate_uniqueness_of(:phone_no) }
+    it { should validate_uniqueness_of(:username) }
   end
 
   describe 'associations' do
@@ -42,6 +43,12 @@ RSpec.describe User, type: :model do
     it { should_not allow_value('invalid-email').for(:email) }
 
     it { should have_db_index(:email).unique(true) }
+
+    it { should validate_presence_of(:username).on(:create) }
+    it { should validate_uniqueness_of(:username).case_insensitive }
+    it { should allow_value('foga').for(:username) }
+
+    it { should have_db_index(:username).unique(true) }
 
     it { should have_secure_password }
 
