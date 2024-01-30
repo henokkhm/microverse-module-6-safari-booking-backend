@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_19_091950) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_30_085841) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,11 +29,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_19_091950) do
   create_table "safaris", force: :cascade do |t|
     t.string "name", null: false
     t.string "location", null: false
-    t.text "description", null: false
     t.float "price", null: false
     t.text "img", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "short_description"
+    t.text "long_description"
+    t.integer "duration"
     t.index ["name"], name: "index_safaris_on_name", unique: true
   end
 

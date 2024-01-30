@@ -300,10 +300,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-17
-<<<<<<< HEAD
-=======
   x86_64-linux
->>>>>>> development
 
 DEPENDENCIES
   bootsnap
@@ -319,13 +316,8 @@ DEPENDENCIES
   puma (>= 5.0)
   rack-cors
   rails (~> 7.1.2)
-<<<<<<< HEAD
-  rspec (~> 3.4)
-  rspec-rails
-=======
   rspec-rails (~> 3.5)
   rswag
->>>>>>> development
   rubocop (>= 1.0, < 2.0)
   shoulda-matchers
   tzinfo-data
