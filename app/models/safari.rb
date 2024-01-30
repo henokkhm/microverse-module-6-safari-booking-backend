@@ -6,4 +6,5 @@ class Safari < ApplicationRecord
   validates :description, presence: true, length: { minimum: 3 }
   validates :img, presence: true
   has_many :reservations, dependent: :destroy
+  has_many :users, through: :reservations
 end
