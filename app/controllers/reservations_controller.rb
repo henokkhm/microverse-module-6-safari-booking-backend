@@ -6,13 +6,13 @@ class ReservationsController < ApplicationController
   # GET /reservations
   def index
     @reservations = Reservation.accessible_by(current_ability)
-    render json: set_user.reservations, include: [:safari, :user], status: :ok
+    render json: set_user.reservations, include: %i[safari user], status: :ok
   end
 
   # GET /reservations/1
   def show
     authorize! :read, @reservation
-    render json: @reservation, include: [:safari, :user]
+    render json: @reservation, include: %i[safari user]
   end
 
   # POST /reservations
