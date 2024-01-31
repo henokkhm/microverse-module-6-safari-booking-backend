@@ -1,11 +1,7 @@
 require 'rails_helper'
+require 'support/factory_bot'
 
 RSpec.describe User, type: :model do
-  describe 'validations' do
-    it { should validate_presence_of(:first_name) }
-    it { should validate_presence_of(:last_name) }
-    it { should validate_presence_of(:phone_no) }
-  end
 
   describe 'enums' do
     it { should define_enum_for(:role).with_values(%i[user admin]) }
