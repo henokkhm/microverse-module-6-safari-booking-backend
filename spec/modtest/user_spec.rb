@@ -2,7 +2,6 @@ require 'rails_helper'
 require 'support/factory_bot'
 
 RSpec.describe User, type: :model do
-
   describe 'enums' do
     it { should define_enum_for(:role).with_values(%i[user admin]) }
   end
