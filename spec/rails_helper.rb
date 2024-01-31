@@ -5,7 +5,12 @@ require 'factory_bot'
 require 'factory_bot_rails'
 require 'shoulda/matchers'
 
-require 'support/factory_bot'
+
+ENV['RAILS_ENV'] ||= 'test'
+require File.expand_path('../config/environment', __dir__)
+require 'rspec/rails'
+
+
 
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
@@ -46,6 +51,9 @@ RSpec.configure do |config|
 
   config.include(Shoulda::Matchers::ActiveModel, type: :model)
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
+
+
+  config.fixture_path = Rails.root.join('spec/fixtures')
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
