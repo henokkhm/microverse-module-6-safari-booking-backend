@@ -7,15 +7,26 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-# Create users
+
+# Create Admin
+admin = User.create!(
+  email: 'admin@test.com',
+  password: 'password',
+  first_name: 'Henary',
+  last_name: 'kh',
+  phone_no: '1234567891',
+  username: 'admin',
+  role: "admin"
+)
+
+# Create normal user
 user1 = User.create!(
   email: 'user1@test.com',
   password: 'password',
   first_name: 'Henary',
   last_name: 'kh',
   phone_no: '1234567890',
-  username: 'user1',
-  role: 0
+  username: 'user1'
 )
 
 user2 = User.create!(
@@ -24,8 +35,7 @@ user2 = User.create!(
   first_name: 'Chalambi',
   last_name: 'kh',
   phone_no: '9876543210',
-  username: 'user2',
-  role: 0
+  username: 'user2'
 )
 
 # Create safaris
