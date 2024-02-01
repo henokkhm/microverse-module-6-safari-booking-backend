@@ -31,6 +31,7 @@
     - [If you want to add and remove a car you should log in as an admin user.](#if-you-want-to-add-and-remove-a-car-you-should-log-in-as-an-admin-user)
     - [Openining server](#openining-server)
     - [Test](#test)
+    - [Run tests](#run-tests)
   - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -212,13 +213,16 @@ Before opening the server go to file /config/puma.rb  and comment line 33
 ```
 
 ### Test
+### Run tests
 
-to run the test
+There are separated into several folders, and some are quite large so running all of them at once may cause some to fail. We highly recommend that you run the tests by their folders using the following commands:
 
-```
-    rspec .\spec\
-```
 
+- _Model Specs_
+
+    >`rspec ./spec/modetest`
+
+    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
