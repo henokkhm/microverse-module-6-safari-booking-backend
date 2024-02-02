@@ -26,7 +26,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       # t.string   :current_sign_in_ip
       # t.string   :last_sign_in_ip
 
-      ## Confirmable
+      ## Confirmableg
       # t.string   :confirmation_token
       # t.datetime :confirmed_at
       # t.datetime :confirmation_sent_at
